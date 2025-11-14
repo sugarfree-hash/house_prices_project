@@ -1,0 +1,39 @@
+--- データサイエンスで無視すべきファイル ---
+
+1. データファイル (Kaggleからダウンロードしたオリジナルデータ)
+
+data/フォルダ内の全てのCSVとZIPファイルを無視
+
+data/.csv
+data/.zip
+
+2. モデル出力、ログ、結果ファイル
+
+訓練済みモデル（巨大化するため追跡しない）
+
+*.pkl
+*.h5
+*.joblib
+.log
+submission_.csv  # 提出ファイルも毎回変わるため無視
+
+3. Pythonのキャッシュと一時フォルダ
+
+Pythonが自動生成するキャッシュファイル
+
+pycache/
+*.pyc
+
+4. Jupyter Notebook関連
+
+ノートブックの一時保存フォルダ（差分が大量に出るのを防ぐ）
+
+.ipynb_checkpoints/
+*~
+
+5. 仮想環境ファイル
+
+環境構築は requirements.txt で管理し、環境自体は無視
+
+venv/
+.venv/
