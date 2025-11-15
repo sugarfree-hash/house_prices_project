@@ -15,7 +15,7 @@ from sklearn.metrics import mean_squared_error
 # ファイルパス
 train_path = 'data/train.csv'
 test_path = 'data/test.csv'
-submission_output_path = 'data/submit/Ver.1.0/london_prices_submission.csv' 
+submission_output_path = 'data/submit/london_prices_submission.csv' 
 
 # データ読み込み
 try:
@@ -124,7 +124,7 @@ predictions_log = gscv.best_estimator_.predict(X_test)
 predictions_original = np.expm1(predictions_log)
 
 # 提出ファイル形式に整形
-submission = pd.DataFrame({'Id': df_test['ID'], 'price': predictions_original}) 
+submission = pd.DataFrame({'ID': df_test['ID'], 'price': predictions_original}) 
 
 # 提出ファイルを出力
 submission.to_csv(submission_output_path, index=False)

@@ -124,7 +124,7 @@ predictions_log = gscv.best_estimator_.predict(X_test)
 predictions_original = np.expm1(predictions_log)
 
 # 提出ファイル形式に整形
-submission = pd.DataFrame({'Id': df_test['ID'], 'price': predictions_original}) 
+submission = pd.DataFrame({'ID': df_test['ID'], 'price': predictions_original}) 
 
 # 提出ファイルを出力
 submission.to_csv(submission_output_path, index=False)
