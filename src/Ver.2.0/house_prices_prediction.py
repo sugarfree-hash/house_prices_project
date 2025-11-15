@@ -15,7 +15,7 @@ from sklearn.metrics import mean_squared_error
 # ファイルパス
 train_path = 'data/train.csv'
 test_path = 'data/test.csv'
-submission_output_path = 'data/submit/london_prices_submission.csv' 
+submission_output_path = 'data/submit/Ver.1.0/london_prices_submission.csv' 
 
 # データ読み込み
 try:
